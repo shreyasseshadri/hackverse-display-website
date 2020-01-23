@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container" class="container" style="display:block">
+            <div id="timer_start" style="display: block;">
+                <h1 id="head_start">Hackathon Starts in</h1>
+                <ul>
+                    <li><span id="hours_start"></span>Hours</li>
+                    <li><span id="minutes_start"></span>Minutes</li>
+                    <li><span id="seconds_start"></span>Seconds</li>
+                </ul>        
+            </div>
+
+            <div id="timer_end" style="display: block;">
+                <h1 id="head_end">Hackathon ENDS in</h1>
+                <ul>
+                    <li><span id="hours_end"></span>Hours</li>
+                    <li><span id="minutes_end"></span>Minutes</li>
+                    <li><span id="seconds_end"></span>Seconds</li>
+                </ul>        
+            </div>
+
+
+            <div id="dinner" style="display: none;">
+                <h1>Its Dinner Time !</h1> 
+            </div>
+
+            <div id="lunch" style="display: none;">
+                    <h1>Its lunch Time !</h1> 
+            </div>
+
+            <div id="breakfast" style="display: none;">
+                    <h1>Its Breakfast Time !</h1> 
+            </div>
+
+            <div id="tea" style="display: none;">
+                    <h1>Its High Tea Time !</h1> 
+            </div>
+        </div>
+
+        <div autoplay id="video1" style="display: none;">
+            <video id="video" height="100%" width="100%">
+                <source src="video1.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+                <p>Fallback content to cover incompatibility issues</p>
+            </video>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
