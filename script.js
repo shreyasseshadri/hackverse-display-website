@@ -3,8 +3,8 @@ const second = 1000,
     hour = minute * 60,
     day = hour * 24;
 
-let countDown_end = new Date('Jan 25, 2020 17:00:00').getTime()
-let countDown_start = new Date('Jan 24, 2020 14:00:00').getTime()
+let countDown_end = new Date('Jan 25, 2020 22:00:00').getTime()
+let countDown_start = new Date('Jan 25, 2020 10:00:00').getTime()
 let input_flag = false
 let input = ""
 
@@ -14,7 +14,10 @@ const tea_div = document.getElementById("tea")
 const breakfast_div = document.getElementById("breakfast")
 const video_1_div = document.getElementById("video1")
 const container_div = document.getElementById("container")
+
 const marquee_div = document.getElementById("announcement")
+const type_flag = document.getElementById("flag_img")
+
 const timer_end_div = document.getElementById("timer_end")
 const timer_start_div = document.getElementById("timer_start")
 
@@ -26,7 +29,7 @@ x = setInterval(function() {
         distance_end = countDown_end - now_end;
     // console.log("END day: ", Math.floor(distance_end / (day)))
     // console.log(Math.floor(distance_end/hour))
-    document.getElementById('hours_end').innerText = ('0' + Math.floor((distance_end % (day)) / (hour))).slice(-2);
+    document.getElementById('hours_end').innerText = ('0' + Math.floor((distance_end) / (hour))).slice(-2);
     document.getElementById('minutes_end').innerText = ('0' + Math.floor((distance_end % (hour)) / (minute))).slice(-2);
     document.getElementById('seconds_end').innerText = ('0' + Math.floor((distance_end % (minute)) / second)).slice(-2);
 }, second)
@@ -49,8 +52,10 @@ document.addEventListener("keydown", function onEvent(event) {
     // console.log(event.key)
     if (event.key === '`') {
         if (input_flag == true) {
+            // type_flag.style.visibility = "visible";
             marquee_div.innerHTML = input;
         } else {
+            // type_flag.style.visibility = "hidden";
             marquee_div.innerHTML = "  ";
         }
         input_flag = !input_flag;
